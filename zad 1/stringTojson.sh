@@ -3,6 +3,6 @@
 # mylosz@yahoo.pl
 ###################
 
-sed "s/ /\"}\n{\"word\":\"/g"  text > text.txt
-sed -i '1s/^/{\"word\":\"/' text.txt
-sed -i.bck '$s/$/\"}/' text.txt
+sed "s/ /\"}\n{\"word\":\"/g"  text8 > text8.json
+sed -i '1s/^/{\"word\":\"/' text8.json
+sed -i.bck '$s/$/\"}/' text8.json
