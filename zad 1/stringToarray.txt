@@ -1,0 +1,7 @@
+db.Train.find( { "tags" : { $type : 2 } } ).snapshot().forEach(
+ function (x) {
+   if (!Array.isArray(x.tags)){
+       var textArr = x.tags.split(' ');
+       x.tags = textArr;
+       db.Train.save(x);
+}});
