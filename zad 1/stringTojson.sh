@@ -10,8 +10,8 @@ if [ -z "$1" ] ; then
   exit 1;
 fi
 
-sed "s/ /\"}\n{\"word\":\"/g" "$1" > "$2"
-sed -i '1s/^/{\"word\":\"/' "$2"
-sed -i '$s/$/\"}/' "$2"
+sed "s/ /\" }\n{ \"word\" : \"/g" "$1" > "$2"
+sed -i '1s/^/{ \"word\":\"/' "$2"
+sed -i '$s/$/\" }/' "$2"
 
 echo "Gotowe!"
