@@ -1,0 +1,9 @@
+var liczba_tag = 0;
+db.Train.find( { "tags" : { $type : 2 } } ).snapshot().forEach(
+ function (x) {
+   if (Array.isArray(x.tags)){
+       liczba_tag += x.tags.length;
+   }	
+ }
+);
+	print(liczba_tag);
