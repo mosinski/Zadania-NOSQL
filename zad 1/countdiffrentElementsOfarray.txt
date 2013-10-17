@@ -1,0 +1,15 @@
+var tagi = "";
+
+db.Train.find( { "tags" : { $type : 2 } } ).snapshot().forEach(function (x) {
+ for(var i = 0; i < x.tags.length; i++){
+ 	if(tagi.indexOf(x.tags[i]) == -1){
+		if (tagi.length != 0){ 
+			tagi += " "+ x.tags[i];
+		}
+		else {
+			tagi = x.tags[i];
+		}
+	}
+ }
+});
+print(tagi.split(' ').length);
