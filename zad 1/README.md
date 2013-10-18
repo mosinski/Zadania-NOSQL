@@ -1,5 +1,5 @@
 # Zadanie 1
-a) Baze Train.csv zaimportowa³em do bazy MongoDB poleceniem:
+a) Baze Train.csv zaimportowaï¿½em do bazy MongoDB poleceniem:
 
 ```sh
 mongoinport -c nosql -d Train "_id" "title" "body" "tags" --type csv --file d:\Train.csv --headerline
@@ -7,9 +7,11 @@ mongoinport -c nosql -d Train "_id" "title" "body" "tags" --type csv --file d:\T
 
 ![Data Wranglers](Przechwytywanie.PNG)
 
-b) Zaimportowano 6034195 objektów czas trwania ok. 2,5h
+b) Zaimportowano 6034195 objektï¿½w czas trwania ok. 2,5h
 
-c) Zmieni³em format tagów ze stringa na tablice za pomoc¹ skryptu stringToarray
+c) Zmieniï¿½em format tagï¿½w ze stringa na tablice za pomocï¿½ skryptu stringToarray
    czas wykonywania ok. 40min
-   Zliczy³em tagi za pomoc¹ skryptu countElementsArray czas trwania ok. 30min wynik to 17408733
-   Zliczy³em unikalne tagi za pomoc¹ skryptu countdiffrentElementsOfarray 
+   
+   Zliczyï¿½em tagi za pomocï¿½ skryptu countElementsArray czas trwania ok. 30min wynik to 17408733
+   
+   Zliczyï¿½em unikalne tagi za pomocï¿½ skryptu countdiffrentElementsOfarray 
