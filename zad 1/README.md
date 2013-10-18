@@ -1,5 +1,5 @@
 # Zadanie 1
-a) Baze Train.csv zainportowa³em do bazy MongoDB poleceniem:
+a) Baze Train.csv zaimportowa³em do bazy MongoDB poleceniem:
 
 ```sh
 mongoinport -c nosql -d Train "_id" "title" "body" "tags" --type csv --file d:\Train.csv --headerline
@@ -7,6 +7,9 @@ mongoinport -c nosql -d Train "_id" "title" "body" "tags" --type csv --file d:\T
 
 ![Data Wranglers](Przechwytywanie.PNG)
 
-Zaimportowano 6034195 objektów czas trwania ok 2h
+b) Zaimportowano 6034195 objektów czas trwania ok. 2,5h
 
-Do aggregacji mo¿na wykorzystaæ te kolekcje:
+c) Zmieni³em format tagów ze stringa na tablice za pomoc¹ skryptu stringToarray
+   czas wykonywania ok. 40min
+   Zliczy³em tagi za pomoc¹ skryptu countElementsArray czas trwania ok. 30min wynik to 17408733
+   Zliczy³em unikalne tagi za pomoc¹ skryptu countdiffrentElementsOfarray 
