@@ -1,5 +1,5 @@
-# Zadanie 1
-a) Baze Train.csv zaimportowa�em do bazy MongoDB poleceniem:
+﻿# Zadanie 1
+a) Baze Train.csv zaimportowałem do bazy MongoDB poleceniem:
 
 ```sh
 mongoinport -c nosql -d Train "_id" "title" "body" "tags" --type csv --file d:\Train.csv --headerline
@@ -7,11 +7,18 @@ mongoinport -c nosql -d Train "_id" "title" "body" "tags" --type csv --file d:\T
 
 ![Data Wranglers](Przechwytywanie.PNG)
 
-b) Zaimportowano 6034195 objekt�w czas trwania ok. 2,5h
+b) Zaimportowano 6034195 objektów (patrz screen nr 1) czas trwania ok. 2,5h 
 
-c) Zmieni�em format tag�w ze stringa na tablice za pomoc� skryptu stringToarray
+
+c) Zmieniłem format tagów ze stringa na tablice za pomocą skryptu stringToarray
    czas wykonywania ok. 40min
    
-   Zliczy�em tagi za pomoc� skryptu countElementsArray czas trwania ok. 30min wynik to 17408733
+   Zliczyłem tagi za pomocą skryptu countElementsArray czas trwania ok. 30min wynik to 17408733
    
-   Zliczy�em unikalne tagi za pomoc� skryptu countdiffrentElementsOfarray 
+   Zliczyłem unikalne tagi za pomocą skryptu countdiffrentElementsOfarray 
+
+d) Zmieniłem baze text8 na text8.json za pomocą programu napisanego w bashu stringTojson który każdę słowo zamieniał na osobny obiekt json trwało to ok. 30min
+
+![Data Wranglers](Przechwytywanie.PNG)
+
+   Wczytałem baze text8.json do bazy MongoDB (patrz screen nr 2) zaimportowano 17005207 objektów
