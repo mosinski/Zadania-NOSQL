@@ -70,9 +70,8 @@ MongoDB version: 2.5.2
   sys	  2m45.162s
   ```
   Zawsze jeden z dwóch rdzeni przy imporcie działał na 100% ilość wątków wachała się pomiędzy 2-6 wątków.
-![htop](../../images/mosinski/screen2.png)
-![htop](../../images/mosinski/screen3.png)
-
+  ![htop](../../images/mosinski/screen2.png)
+  ![htop](../../images/mosinski/screen3.png)
 #### zliczanie słów
   Ogółem:
   ```js
