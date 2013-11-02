@@ -83,7 +83,7 @@ MongoDB version: 2.5.2
   db.text8.distinct("word").length
   253854
   ```
-  Najbardziej popularne słowo:
+  Najbardziej popularne słowo:   Słowo "the" - 1061396 wystąpień czyli 6,24% wszystkich wyrazów
   ```js
   db.text8.aggregate(
     [
@@ -95,9 +95,8 @@ MongoDB version: 2.5.2
   
   { "result" : [ { "_id" : "the", "number" : 1061396 } ], "ok" : 1 }
 
-  Słowo "the" - 1061396 wystąpień czyli 6,24% wszystkich wyrazów
   ```
-  10 Najbardziej popularnych słów:
+  10 Najbardziej popularnych słów:   10 słów - 4205965 wystąpień czyli 24,73% wszystkich wyrazów
   ```js
   db.text8.aggregate(
     [
@@ -110,12 +109,10 @@ MongoDB version: 2.5.2
   
   { "result" : [ { "_id" : "10 słów", "count" : 4205965 } ], "ok" : 1 }
 
-
-  10 słów - 4205965 wystąpień czyli 24,73% wszystkich wyrazów
   ```
   wyniki umieściłem [tutaj](../../data/mosinski/10.json)
   
-  100 Najbardziej popularnych słów:
+  100 Najbardziej popularnych słów:  100 słów - 7998978 wystąpień czyli 47,04% wszystkich wyrazów
   ```js
   db.text8.aggregate(
     [
@@ -128,12 +125,10 @@ MongoDB version: 2.5.2
   
   { "result" : [ { "_id" : "100 słów", "count" : 7998978 } ], "ok" : 1 }
 
-
-  100 słów - 7998978 wystąpień czyli 47,04% wszystkich wyrazów
   ```
   wyniki umieściłem [tutaj](../../data/mosinski/100.json)
   
-  1000 Najbardziej popularnych słów:
+  1000 Najbardziej popularnych słów:   1000 słów - 11433354 wystąpień czyli 67,23% wszystkich wyrazów
   ```js
   db.text8.aggregate(
     [
@@ -146,8 +141,6 @@ MongoDB version: 2.5.2
   
   { "result" : [ { "_id" : "1000 słów", "count" : 11433354 } ], "ok" : 1 }
 
-
-  1000 słów - 11433354 wystąpień czyli 67,23% wszystkich wyrazów
   ```
 * 1e
    wkrótce.. 
