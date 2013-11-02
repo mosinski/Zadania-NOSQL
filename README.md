@@ -108,15 +108,7 @@ MongoDB version: 2.5.2
     ]
   )
   
-  {
-	"result" : [
-		{
-			"_id" : "10 słów",
-			"count" : 4205965
-		}
-	],
-	"ok" : 1
-  }
+  { "result" : [ { "_id" : "10 słów", "count" : 4205965 } ], "ok" : 1 }
 
 
   10 słów - 4205965 wystąpień czyli 24,73% wszystkich wyrazów
@@ -134,15 +126,7 @@ MongoDB version: 2.5.2
     ]
   )
   
-  {
-	"result" : [
-		{
-			"_id" : "100 słów",
-			"count" : 7998978
-		}
-	],
-	"ok" : 1
-  }
+  { "result" : [ { "_id" : "100 słów", "count" : 7998978 } ], "ok" : 1 }
 
 
   100 słów - 7998978 wystąpień czyli 47,04% wszystkich wyrazów
@@ -160,16 +144,7 @@ MongoDB version: 2.5.2
     ]
   )
   
-  {
-	"result" : [
-		{
-			"_id" : "1000 słów",
-			"count" : 11433354
-		}
-	],
-	"ok" : 1
-  }
-
+  { "result" : [ { "_id" : "1000 słów", "count" : 11433354 } ], "ok" : 1 }
 
 
   1000 słów - 11433354 wystąpień czyli 67,23% wszystkich wyrazów
