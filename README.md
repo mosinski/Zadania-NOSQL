@@ -32,7 +32,7 @@ MongoDB version: 2.5.2
 
 * 1b
 
-  ```bash
+  ```js
   db.Train.count()
   6034195
   ```
