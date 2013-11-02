@@ -34,6 +34,7 @@ MongoDB version: 2.5.2
 
   ```bash
   db.Train.count()
+  6034195
   ```
   Wynik: 6034195 czyli się zgadza
 
