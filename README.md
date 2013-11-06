@@ -182,9 +182,10 @@ MongoDB version: 2.5.2
   ```
 #### Koordynaty kilku miast w Polsce:
   Warszawa 52.259,21.020
+  
   Gdańsk 54.360,18.639
+  
   Poznań 52.399, 16.900
-
 #### Zapytania
   Wyświetl wszystkie stacje w odległości 100 km od Warszawy:
   ```js
