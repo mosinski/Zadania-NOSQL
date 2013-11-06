@@ -3,6 +3,11 @@
 ```bash
 MongoDB version: 2.5.2
 ```
+## Menu
+* [Zadania 1a](#*-1a)
+* [Zadanie 1b](#*-1b)
+* [Zadanie 1d](#zadanie-1d)
+* [Zadanie 1e](#zadanie-1e)
 
 ## Zadanie 1
 
