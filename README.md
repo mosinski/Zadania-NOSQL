@@ -73,6 +73,9 @@ MongoDB version: 2.5.2
   Zawsze jeden z dwóch rdzeni przy imporcie działał na 100% ilość wątków wachała się pomiędzy 2-6 wątków.
   ![htop](../../images/mosinski/screen2.png)
   ![htop](../../images/mosinski/screen3.png)
+
+  <b>Screen z mms-a</b>
+  ![htop](../../images/mosinski/screen.png)
 #### zliczanie słów
   Ogółem:
   ```js
@@ -144,4 +147,71 @@ MongoDB version: 2.5.2
 
   ```
 * 1e
-   wkrótce.. 
+#### import
+  Do obróbki użyłem bazy listy [Stacji Orlen](../../data/mosinski/Stacje_paliw_Orlen.csv) tutaj zaimportowałem poleceniem:
+  ```bash
+  $ time mongoimport -d GeoOrlen -c stacje  < Stacje_paliw_Orlen.json
+  
+  connected to: 127.0.0.1
+  Mon Nov  4 22:56:14.360 check 9 1245
+  Mon Nov  4 22:56:14.360 imported 1245 objects
+
+  real	  0m0.284s
+  user	  0m0.024s
+  sys	  0m0.056s
+  ```
+  przykładowy rekord:
+  ```js
+  db.geoJson.findOne()
+  {
+	"_id" : ObjectId("527817fe644839d19fd136b5"),
+	"loc" : {
+		"type" : "Point",
+		"coordinates" : [
+			20.021194,
+			49.453218
+		]
+	},
+	"name" : "Stacje paliw Orlen",
+	"city" : "Nowy Targ"
+  }
+  ```
+#### Dodanie index
+  ```js
+  db.geoJson.ensureIndex({"loc" : "2dsphere"});
+  ```
+#### Koordynaty kilku miast w Polsce:
+  Warszawa 52.259,21.020
+  Gdańsk 54.360,18.639
+  Poznań 52.399, 16.900
+
+#### Zapytania
+  Wyświetl wszystkie stacje w odległości 100 km od Warszawy:
+  ```js
+  db.geoJson.find({ 
+    loc: {$near: {
+        $geometry: punkt}, $maxDistance: 4800000} 
+  }).toArray()
+
+  ```
+  <b>wyniki:</b>
+  ```js
+  [
+	{
+		"_id" : ObjectId("527817fe644839d19fd13a63"),
+		"loc" : {
+			"type" : "Point",
+			"coordinates" : [
+				22.56548,
+				49.42173
+			]
+		},
+		"name" : "Stacje paliw Orlen",
+		"city" : "Ustrzyki Dolne"
+	}
+  ]
+  ```
+  
+
+  reszta wkrótce..
+  
