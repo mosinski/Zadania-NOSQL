@@ -257,6 +257,17 @@ MongoDB version: 2.5.2
 # Zadanie 2
 Do zadania użyłem bazy listy miliona najbardziej popularnych stron internetowych [z tąd]()
 
+## import do mongodb
+  ```bash
+  $ time mongoimport --type csv -d Websites -c Rank --file website_rank.csv --headerline
+  
+  real	  0m58.411s
+  user	  0m15.478s
+  sys	  0m1.232s
+
+  ```
+
+
 Parametry przykładowego rekordu:
 
 | GlobalRank | TldRank | Domain     | TLD | RefSubNets | RefIPs  | IDN_Domain | IDN_TLD | PrevGlobalRank | PrevTldRank | PrevRefSubNets | PrevRefIPs |
