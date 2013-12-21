@@ -264,7 +264,6 @@ Do zadania użyłem bazy listy miliona najbardziej popularnych stron internetowy
   real	  0m58.411s
   user	  0m15.478s
   sys	  0m1.232s
-
   ```
 
 
