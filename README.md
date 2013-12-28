@@ -4,7 +4,7 @@
 MongoDB version: 2.5.2
 ```
 ## Menu
-- [Zadanie 1](#Zadanie-1)
+<b>[Zadanie 1](#Zadanie-1)</b>
 - [Train](#Train)
     - [Przygotowanie pliku](#przygotowanie-pliku)
     - [Import do bazy](#import)
@@ -24,10 +24,14 @@ MongoDB version: 2.5.2
         - [Stacje w odległości 10 km od Poznania](#stacje-w-odległości-100-km-od-poznania)
         - [Stacje na Pomorzu](#stacje-na-pomorzu)
 
-- [Zadanie 2](#Zadanie-2)
-    - [Przygotowanie pliku](#przygotowanie-pliku-do-importu)
-    - [Import do bazy Mongo](#import-do-mongodb)
-    - [Import do bazy Elastic Search](#import-do-elastic-search)
+<b>[Zadanie 2](#Zadanie-2)</b>
+- [Przygotowanie pliku](#przygotowanie-pliku-do-importu)
+- [MongoDB](#import-do-mongodb)
+    - [Import](#import-do-mongodb)
+    - [Zapytania](#zapytania-mongodb)
+- [ElasticSearch](#import-do-elasticsearch)
+    - [Import](#import-do-elasticsearch)
+    - [Zapytania](#zapytania-elasticsearch)
 
 
 
@@ -265,7 +269,7 @@ Do zadania użyłem bazy listy 2,7 mln. słów do gier wg zasad dopuszczalności
 kodowanie pliku: win-1250 DOS-owe
 
 ## przygotowanie pliku do importu
-  zmiana kodowania z cp1250 na utf8<br>
+  zmiana kodowania z <b>cp1250</b> na <b>utf8</b><br>
   ```bash
   $ time iconv -f cp1250 -t utf8 slowa-win.txt slowa-unix.txt
 
@@ -293,7 +297,7 @@ kodowanie pliku: win-1250 DOS-owe
   user	  0m22.379s
   sys	  0m2.206s
   ```
-## agregacje
+## zapytania mongodb
 #### Ilość słów zaczynających się na daną literę alfabetu:
   ```js
   db.Words.aggregate({
@@ -305,7 +309,6 @@ kodowanie pliku: win-1250 DOS-owe
   ```
 #### Wyniki: [JSON](../../data/mosinski/first_letter.json.json)
   
-  
-## import do elastic search
-
-##
+* elasticsearch
+## import do elasticsearch
+## zapytania elasticsearch
