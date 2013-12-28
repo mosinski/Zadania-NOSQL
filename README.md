@@ -4,6 +4,7 @@
 MongoDB version: 2.5.2
 ```
 ## Menu
+- [Zadanie 1](#Zadanie-1)
 - [Train](#Train)
     - [Przygotowanie pliku](#przygotowanie-pliku)
     - [Import do bazy](#import)
@@ -22,6 +23,8 @@ MongoDB version: 2.5.2
         - [Stacje w odległości 10 km od Gdańska](#stacje-w-odległości-100-km-od-gdanska)
         - [Stacje w odległości 10 km od Poznania](#stacje-w-odległości-100-km-od-poznania)
         - [Stacje na Pomorzu](#stacje-na-pomorzu)
+
+- [Zadanie 2](#Zadanie-2)
 
 
 
@@ -255,8 +258,19 @@ MongoDB version: 2.5.2
 #### wyniki: [JSON](../../data/mosinski/in_pomorskie.json), [Mapka](../../data/mosinski/in_pomorskie.geojson)
 
 # Zadanie 2
-Do zadania użyłem bazy listy miliona najbardziej popularnych stron internetowych [z tąd]()
+Do zadania użyłem bazy listy 2,7 mln. słów do gier wg zasad dopuszczalności SJP.pl (Słownik Języka Polskiego)
+kodowanie: win-1250 DOS-owe
 
+## przygotowanie pliku
+  przygotowałem plik do jsona z kodowaniem UNIX za pomocą tego skryptu [z tąd](../../scripts/mosinski/stringTojson2.sh)
+
+  ```bash
+  $ time bash stringTojson2.sh slowa-win.txt slowa.json
+
+  real	  0m40.065s
+  user	  0m10.137s
+  sys	  0m29.920s
+  ```
 ## import do mongodb
   ```bash
   $ time mongoimport --type csv -d Websites -c Rank --file website_rank.csv --headerline
@@ -265,10 +279,3 @@ Do zadania użyłem bazy listy miliona najbardziej popularnych stron internetowy
   user	  0m15.478s
   sys	  0m1.232s
   ```
-
-
-Parametry przykładowego rekordu:
-
-| GlobalRank | TldRank | Domain     | TLD | RefSubNets | RefIPs  | IDN_Domain | IDN_TLD | PrevGlobalRank | PrevTldRank | PrevRefSubNets | PrevRefIPs |
-|------------|---------|------------|-----|------------|---------|------------|---------|----------------|-------------|----------------|------------|
-| 1          | 1       | google.com | com | 322658     | 1950228 | google.com | com     | 1              | 1           | 322878         | 1953389    |
