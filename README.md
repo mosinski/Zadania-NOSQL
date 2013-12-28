@@ -258,7 +258,7 @@ MongoDB version: 2.5.2
 #### wyniki: [JSON](../../data/mosinski/in_pomorskie.json), [Mapka](../../data/mosinski/in_pomorskie.geojson)
 
 # Zadanie 2
-Do zadania użyłem bazy listy 2,7 mln. słów do gier wg zasad dopuszczalności SJP.pl (Słownik Języka Polskiego)
+Do zadania użyłem bazy listy 2,7 mln. słów do gier wg zasad dopuszczalności SJP.pl (Słownik Języka Polskiego)<br>
 kodowanie: win-1250 DOS-owe
 
 ## przygotowanie pliku
