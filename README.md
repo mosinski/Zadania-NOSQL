@@ -269,7 +269,6 @@ kodowanie: win-1250 DOS-owe
   ```bash
   $ time iconv -f cp1250 -t utf8 slowa-win.txt slowa-unix.txt
 
-
   real	  0m0.310s
   user	  0m0.206s
   sys	  0m0.103s
