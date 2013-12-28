@@ -286,8 +286,12 @@ kodowanie: win-1250 DOS-owe
   ```bash
   $ time mongoimport -d Zad2 -c Words  < slowa.json
   
-  real	  0m58.411s
-  user	  0m15.478s
-  sys	  0m1.232s
+  Sat Dec 28 15:20:29.613 check 9 2703812
+  Sat Dec 28 15:20:30.687 imported 2703812 objects
+
+  real	  2m1.637s
+  user	  0m22.379s
+  sys	  0m2.206s
+
   ```
 ## import do elastic search
