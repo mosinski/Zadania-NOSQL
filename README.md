@@ -281,6 +281,7 @@ kodowanie: win-1250 DOS-owe
   user	  0m9.717s
   sys	  0m27.452s
   ```
+* mongodb
 ## import do mongodb
   ```bash
   $ time mongoimport -d Zad2 -c Words  < slowa.json
@@ -291,6 +292,20 @@ kodowanie: win-1250 DOS-owe
   real	  2m1.637s
   user	  0m22.379s
   sys	  0m2.206s
-
   ```
+## agregacje
+#### Ilość słów zaczynających się na daną literę alfabetu:
+  ```js
+  db.Words.aggregate({
+    $group: {
+      _id: { $substr: ['$word', 0, 1] },
+      count: { $sum: 1 }
+    } 
+  })
+  ```
+#### Wyniki: [JSON](../../data/mosinski/first_letter.json.json)
+  
+  
 ## import do elastic search
+
+##
