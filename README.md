@@ -262,7 +262,7 @@ MongoDB version: 2.5.2
 
 # Zadanie 2
 Do zadania użyłem bazy listy 2,7 mln. słów do gier wg zasad dopuszczalności SJP.pl (Słownik Języka Polskiego)<br>
-kodowanie: win-1250 DOS-owe
+kodowanie pliku: win-1250 DOS-owe
 
 ## przygotowanie pliku do importu
   zmiana kodowania z cp1250 na utf8<br>
