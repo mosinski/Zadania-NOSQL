@@ -263,13 +263,14 @@ kodowanie: win-1250 DOS-owe
 
 ## przygotowanie pliku
   przygotowałem plik do jsona z kodowaniem UNIX za pomocą tego skryptu [z tąd](../../scripts/mosinski/stringTojson2.sh)
+  Kody windows-1250 oraz iso-8859-2 różnią się jedynie literami ąśź oraz ĄŚŹ
 
   ```bash
   $ time bash stringTojson2.sh slowa-win.txt slowa.json
 
-  real	  0m40.065s
-  user	  0m10.137s
-  sys	  0m29.920s
+  real	  0m46.767s
+  user	  0m17.879s
+  sys	  0m28.401s
   ```
 ## import do mongodb
   ```bash
