@@ -25,6 +25,9 @@ MongoDB version: 2.5.2
         - [Stacje na Pomorzu](#stacje-na-pomorzu)
 
 - [Zadanie 2](#Zadanie-2)
+    - [Przygotowanie pliku](#przygotowanie-pliku-do-importu)
+    - [Import do bazy Mongo](#import-do-mongodb)
+    - [Import do bazy Elastic Search](#import-do-elastic-search)
 
 
 
@@ -261,22 +264,30 @@ MongoDB version: 2.5.2
 Do zadania użyłem bazy listy 2,7 mln. słów do gier wg zasad dopuszczalności SJP.pl (Słownik Języka Polskiego)<br>
 kodowanie: win-1250 DOS-owe
 
-## przygotowanie pliku
-  przygotowałem plik do jsona z kodowaniem UNIX za pomocą tego skryptu [z tąd](../../scripts/mosinski/stringTojson2.sh)
-  Kody windows-1250 oraz iso-8859-2 różnią się jedynie literami ąśź oraz ĄŚŹ
-
+## przygotowanie pliku do importu
+  zmiana kodowania z cp1250 na utf8<br>
   ```bash
-  $ time bash stringTojson2.sh slowa-win.txt slowa.json
+  $ time iconv -f cp1250 -t utf8 slowa-win.txt slowa-unix.txt
 
-  real	  0m46.767s
-  user	  0m17.879s
-  sys	  0m28.401s
+
+  real	  0m0.310s
+  user	  0m0.206s
+  sys	  0m0.103s
+  ```
+  przygotowałem plik do jsona za pomocą tego skryptu [z tąd](../../scripts/mosinski/stringTojson2.sh)
+  ```bash
+  $ time bash stringTojson2.sh slowa-unix.txt slowa.json
+
+  real	  0m39.465s
+  user	  0m9.717s
+  sys	  0m27.452s
   ```
 ## import do mongodb
   ```bash
-  $ time mongoimport --type csv -d Websites -c Rank --file website_rank.csv --headerline
+  $ time mongoimport -d Zad2 -c Words  < slowa.json
   
   real	  0m58.411s
   user	  0m15.478s
   sys	  0m1.232s
   ```
+## import do elastic search
