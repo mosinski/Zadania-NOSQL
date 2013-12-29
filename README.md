@@ -308,7 +308,28 @@ kodowanie pliku: win-1250 DOS-owe
   })
   ```
 #### Wyniki: [JSON](../../data/mosinski/first_letter.json.json)
+#### Najdłuższe słowo najkrótsze słowo długośc wszystkich słów i średnia długośc słowa:
+  ```js
+  var words = db.Words.find();
+  max = 0;
+  min = 0;
+  dl_all = 0;
   
+  words.forEach(function(word) {
+    if(word.word.length > max) {
+      if(min == 0) min = word.word.length;
+      max = word.word.length;
+    }
+    dl_all += word.word.length;
+  });
+  
+  print(tojson("Najkrótsze słowo: "+min));
+  print(tojson("Najdłuższe słowo: "+max));
+  print(tojson("Długość wszystkich słów: "+dl_all));
+  print(tojson("Średnia długość słowa: "+(dl_all/words.count())));
+  ```
+#### Wyniki: [JSON](../../data/mosinski/first_letter.json.json) 
+
 * elasticsearch
 ## import do elasticsearch
 ## zapytania elasticsearch
